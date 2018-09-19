@@ -1,0 +1,91 @@
+body {
+	background-color: whitesmoke;
+	overflow-x: hidden;
+}
+
+header {
+	margin: 0 20%;
+}
+
+.logo {
+	width: 200px;
+	height: 119px;
+	background: url(images/logo_om.png) center/100% no-repeat;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.menu-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-elements-container {
+	display: flex;
+	width: 85%;
+	justify-content: space-evenly;
+}
+
+.basket {
+	width: 20px;
+	height: 23px;
+	background:url(images/shoppingBag.svg) center/100% no-repeat;
+}
+
+.login {
+	width: 20px;
+	height: 23px;
+	background:url(images/user-alt-solid.svg) center/100% no-repeat;
+}
+
+.language {
+	width: 20px;
+	height: 23px;
+	background:url(images/globe-solid.svg) center/100% no-repeat;
+}
+
+.large-header-image-container {
+	background-color: white;
+	margin: 60px 10%;
+	height: 600px;
+	width: 80%;
+	position: relative;
+	z-index: -1;
+}
+
+.large-header-image {
+}
+
+.shop-container {
+	margin: 0 20%;
+	margin-top: -100px;
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.shop-container div{
+	background-color: white;
+	width: calc(95% / 3);
+	height: 250px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.18);
+}
+
+.shop-container div:nth-child(3n+0){
+	margin-right: 0;
+}
+
+footer {
+	padding:0 10%;
+	height: 150px;
+	width: 100%;
+	background-color: #464643;
+	line-height: 150px;
+}
+
+.footer-menu {
+	display: flex;
+	color: white;
+	justify-content: space-between;
+}
