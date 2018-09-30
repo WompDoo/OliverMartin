@@ -2,6 +2,7 @@ body {
 	background-color: #FAFAFA;
 	overflow-x: hidden;
 	font-family: roboto;
+	margin: 0;
 }
 
 header {
@@ -32,18 +33,30 @@ header {
 
 .menu-elements-container div {
 	margin: 0 26px;
+	background-image: linear-gradient(#ed2a30, #ed2a30);
+	background-size: 0 3px, auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	transition: all .2s ease-out;
+	cursor: pointer;
+}
+
+.menu-elements-container div:hover {
+	background-size: 100% 3px, auto;
 }
 
 .basket {
 	width: 20px;
 	height: 23px;
 	background:url(images/shoppingBag.svg) center/100% no-repeat;
+	cursor: pointer;
 }
 
 .login {
 	width: 20px;
 	height: 23px;
 	background:url(images/user-alt-solid.svg) center/100% no-repeat;
+	cursor: pointer;
 }
 
 .language {
@@ -70,6 +83,7 @@ header {
 
 .language-box div {
 	padding: 5px;
+	cursor: pointer;
 }
 
 .language::after {
@@ -126,6 +140,7 @@ header {
 	margin-bottom: 20px;
 	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
 	position: relative;
+	cursor: pointer;
 }
 
 .shop-container-item:nth-child(3n+0){
@@ -171,6 +186,11 @@ header {
 	margin-right: auto;
 	margin-top: 7px;
 	width: 50%;
+	transition: transform .2s ease-in-out;
+}
+
+.shop-container-item:hover .shop-container-item-image{
+	transform: scale(1.1);
 }
 
 .item-info-container {
@@ -215,14 +235,47 @@ header {
 
 footer {
 	padding:0 10%;
-	height: 250px;
-	width: 100%;
+	height: 96px;
 	background-color: #464643;
-	line-height: 150px;
 }
 
 .footer-menu {
 	display: flex;
 	color: white;
-	justify-content: space-between;
+	justify-content: space-around;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 96px;
+}
+
+.footer-menu-container {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-menu-container div {
+	margin: 0 26px;
+	background-image: linear-gradient(#ed2a30, #ed2a30);
+	background-size: 0 3px, auto;
+	background-repeat: no-repeat;
+	background-position: center 60px;
+	transition: all .2s ease-out;
+	cursor: pointer;
+}
+
+.footer-menu-container div:hover {
+	background-size: 100% 3px, auto;
+}
+
+
+.oy::before {
+	content: "©";
+	margin-right: 4px;
+}
+
+.oy, .rights {
+	font-weight: lighter;
+	text-transform: none;
+	color: #a0a0a0;
 }
