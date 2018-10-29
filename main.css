@@ -15,6 +15,7 @@ header {
 	height: 42px;
 	background: url(images/logo_om.png) center/100% no-repeat;
 	margin: 40px auto;
+	transition: all .3s ease-in-out;
 }
 
 .menu-container {
@@ -30,7 +31,6 @@ header {
 	font-size: 14px;
 	font-weight: bold;
 	white-space: nowrap;
-
 }
 
 .menu-elements-container div {
@@ -46,6 +46,16 @@ header {
 .menu-elements-container div:hover {
 	background-size: 100% 3px, auto;
 }
+
+.menu-elements-container div > a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu-elements-container div > a:hover {
+	color: rgba(0, 0, 0, 0.73);
+}
+
 
 .basket {
 	width: 20px;
@@ -238,9 +248,9 @@ header {
 }
 
 footer {
-	padding:0 10%;
 	height: 96px;
 	background-color: #464643;
+	width: 100%;
 }
 
 .footer-menu {
@@ -428,6 +438,104 @@ footer {
 .product-sizes-dropdown:hover .dropbtn {
 	background-color: #404040;
 	color: white;
+}
+
+.products-view {
+	margin-top: unset;
+}
+
+.logo-container:hover .logo {
+	background: url(images/logo_om.png) center/102% no-repeat;
+}
+
+.about-us-container {
+	display: flex;
+	margin: 0 14%;
+	margin-top: 80px;
+	justify-content: space-between;
+	min-height: 200px;
+}
+
+.about-us-bubble {
+	display: flex;
+	flex-direction: column;
+	width: calc(95% / 3);
+}
+
+.about-us-bubble p {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.66);
+	font-weight: lighter;
+	margin-top: 30px;
+}
+
+.about-logo {
+	width: 57px;
+	height: 57px;
+	border-radius: 57px;
+	margin: 0 auto;
+}
+
+.secure {
+	background: #404040 url(images/lock.svg) center/40% no-repeat;
+	background-position-x: 17px;
+	background-position-y: 14px;
+}
+
+.shipping {
+	background: #404040 url(images/shipping.svg) center/50% no-repeat;
+	background-position-x: 16px;
+	background-position-y: 17px;
+}
+
+.contact {
+	background: #404040 url(images/phone.svg) center/50% no-repeat;
+}
+
+.hero-kids {
+	min-height: 960px;
+	width: 100%;
+	background:  url("images/kids.png") center/100% no-repeat;
+	background-position-x: 60px;
+	position: relative;
+}
+
+.hero-kids-header-container {
+	position: absolute;
+	font-size: 38px;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, 0);
+}
+
+.hero-kids-header {
+	text-transform: uppercase;
+	color: white;
+	margin: 0px;
+}
+
+.story:after {
+	content: '→';
+	margin-left: 20px;
+	-webkit-animation: arrowAnim 3s infinite; /* Safari 4.0 - 8.0 */
+	animation: arrowAnim 3s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes arrowAnim {
+	0% {
+		margin-left: 20px;
+	}
+	50% {
+		margin-left: 50px;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+
+.story:hover .story:after {
+
 }
 
 @media screen and (max-width: 1127px) {
