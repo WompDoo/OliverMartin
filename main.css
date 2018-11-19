@@ -324,7 +324,6 @@ hr {
 }
 
 footer {
-	height: 96px;
 	background-color: #464643;
 	width: 100%;
 }
@@ -342,6 +341,7 @@ footer {
 .footer-menu-container {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .footer-menu-container div {
@@ -571,7 +571,7 @@ footer {
 }
 
 .hero-kids {
-	min-height: calc(450px + (960 - 450) * ((100vw - 768px) / (1920 - 768)));
+	min-height: calc(190px + (960 - 190) * ((100vw - 320px) / (1920 - 320)));
 	width: 100%;
 	background:  url("images/kids.png") center/100% no-repeat;
 	background-position-x: 60px;
@@ -580,7 +580,7 @@ footer {
 
 .hero-kids-header-container {
 	position: absolute;
-	font-size: calc(17px + (38 - 17) * ((100vw - 768px) / (1920 - 768)));
+	font-size: calc(8px + (38 - 8) * ((100vw - 320px) / (1920 - 320)));
 	left: 30%;
 	top: 70%;
 }
@@ -601,6 +601,14 @@ footer {
 
 .burger {
 	display: none;
+}
+
+.mobile-divider {
+	display: none;
+}
+
+.content {
+	height: 100vh;
 }
 
 @keyframes arrowAnim {
@@ -634,11 +642,6 @@ footer {
 		height: 100%;
 		position: relative;
 		margin: 0;
-	}
-
-	.shop-container {
-		margin: -125px 7%;
-		margin-bottom: 0px;
 	}
 
 	.products-view {
@@ -688,11 +691,12 @@ footer {
 	}
 
 	.shop-container-item {
-		width: 100%;
+		width: calc(95%/2);
 	}
 
 	.mobile-divider {
 		margin-top: 20px;
+		display: block;
 	}
 
 	.large-header-image-container {
@@ -792,4 +796,58 @@ footer {
 		flex-direction: column;
 	}
 
+	.about-us-container {
+		margin-top: 140px;
+	}
+
+	.hero-kids {
+		background-position-x: 20px;
+	}
+
+	.footer-menu {
+		flex-wrap: wrap;
+	}
+
+	.oy {
+		order: 1;
+	}
+
+	.footer-menu-container {
+		width: 100%;
+	}
+
+	.product-container {
+		padding-bottom: 30px;
+		flex-wrap: wrap;
+		margin: unset;
+		margin: 45px calc(10px + (31 - 10) * ((100vw - 320px) / (768 - 320)));
+	}
+
+	.product-image-container {
+		width: 100%;
+	}
+
+	.product-info-container {
+		width: 100%;
+	}
+
+	.products-view {
+		margin: 45px calc(10px + (31 - 10) * ((100vw - 320px) / (768 - 320)));
+	}
+
+	.shop-filter, .shop-items-container {
+		width: 100%;
+	}
+
+	.category-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 508px) {
+	.shop-container-item {
+		width: 100%;
+	}
 }

@@ -10,6 +10,19 @@
 <body>
 <header>
     <a class="logo-container" href="index.html"><div class="logo"></div></a>
+    <div class="burger" onclick="this.classList.toggle('active')">
+        <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80">
+            <path
+                    class="line top"
+                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path
+                    class="line middle"
+                    d="m 30,50 h 40" />
+            <path
+                    class="line bottom"
+                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+    </div>
     <div class="menu-container">
         <div class="language">
             <div class="language-box">
@@ -24,6 +37,7 @@
             <div>Underwear</div>
             <div>Pyjamas</div>
             <div>Warm clothing</div>
+            <hr class="mobile-divider">
         </div>
         <div class="basket"></div>
         <div class="login"></div>
@@ -31,34 +45,35 @@
 </header>
 
 
-<div class="product-container">
-    <div class="product-image-container">
-        <div class="product-header-image">
-            <img src="images/pj.svg">
-        </div>
-        <div class="product-pictures">
-            <div><img src="images/pj.svg"></div>
-            <div><img src="images/pj.svg"></div>
-            <div><img src="images/pj.svg"></div>
-        </div>
-    </div>
-    <div class="product-info-container">
-        <h1 class="product-header">Cops and robbers</h1>
-        <h2 class="product-sub-header">Who's smarter</h2>
-        <p class="item-price product-price">52</p>
-        <P class="product-info">Amazing soft and well made pyjama top for boys aged 4-10. Made from high quality cotton straight from the fields on Denmark. Will make dreams more adventurous.</P>
-        <div class="product-sizes-dropdown">
-            <button class="dropbtn">Sizes</button>
-            <div class="dropdown-content">
-                <a href="#">XS</a>
-                <a href="#">S</a>
-                <a href="#">M</a>
+<div class="content">
+    <div class="product-container">
+        <div class="product-image-container">
+            <div class="product-header-image">
+                <img src="images/pj.svg">
+            </div>
+            <div class="product-pictures">
+                <div><img src="images/pj.svg"></div>
+                <div><img src="images/pj.svg"></div>
+                <div><img src="images/pj.svg"></div>
             </div>
         </div>
-        <button class="product-add-to-cart">Add to cart</button>
+        <div class="product-info-container">
+            <h1 class="product-header">Cops and robbers</h1>
+            <h2 class="product-sub-header">Who's smarter</h2>
+            <p class="item-price product-price">52</p>
+            <P class="product-info">Amazing soft and well made pyjama top for boys aged 4-10. Made from high quality cotton straight from the fields on Denmark. Will make dreams more adventurous.</P>
+            <div class="product-sizes-dropdown">
+                <button class="dropbtn">Sizes</button>
+                <div class="dropdown-content">
+                    <a href="#">XS</a>
+                    <a href="#">S</a>
+                    <a href="#">M</a>
+                </div>
+            </div>
+            <button class="product-add-to-cart">Add to cart</button>
+        </div>
     </div>
 </div>
-
 
 <footer>
     <div class="footer-menu">
