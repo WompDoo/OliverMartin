@@ -39,7 +39,29 @@
 			<div>Warm clothing</div>
 			<hr class="mobile-divider">
 		</div>
-		<div class="basket"></div>
+		<div onclick="this.classList.toggle('basket-open')" class="basket">
+			<div class="basket-container">
+				<div class="basket-top-container">
+					<div class="basket-item">
+						<div class="basket-item-name">Jalgpalliklubi<div class="basket-item-quantity">2</div></div>
+						<div class="basket-item-price">26</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="basket-bottom-container">
+					<div class="basket-total-quantity">Tooteid kokku:<div>3</div></div>
+					<div class="basket-total-price">39</div>
+				</div>
+				<div class="basket-control-container">
+					<a href="basket.html"><button class="basket-button">Ostukorvi</button></a>
+					<button class="basket-button">Tühjenda</button>
+				</div>
+			</div>
+		</div>
 		<div class="login"></div>
 	</div>
 </header>

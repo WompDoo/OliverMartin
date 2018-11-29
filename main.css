@@ -74,6 +74,7 @@ hr {
 	height: 23px;
 	background:url(images/shoppingBag.svg) center/100% no-repeat;
 	cursor: pointer;
+	position: relative;
 }
 
 .login {
@@ -609,6 +610,184 @@ footer {
 
 .content {
 	height: 100vh;
+}
+
+.basket-container {
+	width: 200px;
+	max-height: 0;
+	background-color: white;
+	border-radius: 3px;
+	position: absolute;
+	top: 30px;
+	left: -175px;
+	opacity: 0;
+	transition: max-height 0.4s ease-in-out, opacity 0.1s ease-in-out;
+	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	display: none;
+}
+
+.basket-open .basket-container {
+	max-height: 600px;
+	opacity: 1;
+	display: block;
+}
+
+.basket-item {
+	display: grid;
+	padding: 10px 8px;
+	grid-template-columns: 80% 20%;
+}
+
+.divider {
+	height:1px;
+	background:#d95555;
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#d95555), to(#fff));
+}
+
+.basket-top-container {
+	margin-top: 10px;
+}
+
+.basket-item-name {
+	display: flex;
+}
+
+.basket-item-quantity:before {
+	content: '(';
+}
+
+.basket-item-quantity:after {
+	content: ')';
+}
+
+.basket-item-price:after, .basket-total-price:after {
+	content: '€';
+}
+
+.basket-bottom-container {
+	display: grid;
+	padding: 10px 8px;
+	grid-template-columns: 80% 20%;
+}
+
+.basket-total-quantity {
+	display: flex;
+}
+
+.basket-total-quantity div {
+	margin-left: 3px;
+}
+
+.basket-control-container {
+	display: grid;
+	padding: 10px 8px;
+	grid-template-columns: repeat(2, 49%);
+	justify-content: space-between;
+}
+
+.basket-button {
+	background-color: transparent;
+	padding: 5px 16px;
+	border: none;
+	cursor: pointer;
+	border: 1px solid rgba(112, 110, 110, 0.65);
+	border-radius: 4px;
+	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	transition: all 0.2s ease-in-out;
+}
+
+.basket-button:hover {
+
+	border: 2px solid rgba(217, 85, 85, 0.65);
+	padding: 4px 15px;
+}
+
+.basket-control-container a {
+	color: black;
+	text-decoration: none;
+}
+
+.basket-body-container {
+	margin: 0 calc(31px + (262 - 31) * ((100vw - 768px) / (1920 - 768)));
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+	padding-top: 10px;
+	padding-bottom: 45px;
+	margin-bottom: 45px;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
+.basket-body-container h1 {
+	text-align: center;
+}
+
+.basket-page-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.basket-page-table th, .basket-page-table td {
+	border: 1px solid #ddd;
+}
+
+.basket-picture {
+	max-height: 60px;
+}
+
+.basket-delete {
+	background: url(images/trash.svg) center no-repeat;
+	margin: auto;
+	padding: 16px;
+	background-size: 30%;
+	transition: all 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+.basket-delete:hover {
+	background-size: 35%;
+}
+
+.basket-body-control-container {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.basket-body-control-container .basket-button {
+	float: right;
+	margin: 5px;
+}
+
+.basket-total {
+	width: 35%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #eeeeee;
+}
+
+.basket-total div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.basket-total p {
+	margin: 5px 20px;
+}
+
+.basket-total h2 {
+	margin: 5px 20px;
+}
+
+.basket-total-price:after {
+	content: '€';
+}
+
+.basket-page-price:after {
+	content: '€';
 }
 
 @keyframes arrowAnim {
