@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Oliver Martin</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+	<a class="logo-container" href="index.html"><div class="logo"></div></a>
+	<div class="burger" onclick="this.classList.toggle('active')">
+		<svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80">
+			<path
+					class="line top"
+					d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+			<path
+					class="line middle"
+					d="m 30,50 h 40" />
+			<path
+					class="line bottom"
+					d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+		</svg>
+	</div>
+	<div class="menu-container">
+		<div class="language">
+			<div class="language-box">
+				<div>EST</div>
+				<div>ENG</div>
+				<div>RUS</div>
+			</div>
+		</div>
+		<div class="menu-elements-container">
+			<div><a href="category.html">Tops</a></div>
+			<div>Trousers</div>
+			<div>Underwear</div>
+			<div>Pyjamas</div>
+			<div>Warm clothing</div>
+			<hr class="mobile-divider">
+		</div>
+		<div onclick="this.classList.toggle('basket-open')" class="basket">
+			<span class="items-in-basket-nubmer">3</span>
+			<div class="basket-container">
+				<div class="basket-top-container">
+					<div class="basket-item">
+						<div class="basket-item-name">Jalgpalliklubi<div class="basket-item-quantity">2</div></div>
+						<div class="basket-item-price">26</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>   <div class="basket-item">
+					<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+					<div class="basket-item-price">13</div>
+				</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+					<div class="basket-item">
+						<div class="basket-item-name">Mingi särk<div class="basket-item-quantity">1</div></div>
+						<div class="basket-item-price">13</div>
+					</div>
+
+				</div>
+				<div class="divider"></div>
+				<div class="basket-bottom-container">
+					<div class="basket-total-quantity">Tooteid kokku:<div>3</div></div>
+					<div class="basket-total-price">39</div>
+				</div>
+				<div class="basket-control-container">
+					<a href="basket.html"><button class="basket-button">Ostukorvi</button></a>
+					<button class="basket-button">Tühjenda</button>
+				</div>
+			</div>
+		</div>
+		<div class="login"></div>
+	</div>
+</header>
+
+<div class="basket-body-container">
+	<h1>Maksmine</h1>
+	<form class="pay-form">
+		<div class="personal-info">
+			<div>
+				<label for="fname">First Name</label>
+				<input id="fname" type="text">
+			</div>
+			<div>
+				<label for="lname">Last Name</label>
+				<input id="lname" type="text">
+			</div>
+			<div>
+				<label for="email">Email</label>
+				<input id="email" type="text">
+			</div>
+			<div>
+				<label for="number">Number</label>
+				<input id="number" type="text">
+			</div>
+		</div>
+		<div class="delivery-info">
+			<div class="deliver-select-container">
+				<div class="deliver-select">
+					<label>
+						<input class="delivery-select" type="checkbox"><span>Itella</span>
+					</label>
+				</div>
+				<div class="deliver-select">
+					<label>
+						<input class="delivery-select" type="checkbox"><span>Omniva</span>
+					</label>
+				</div>
+				<div class="deliver-select">
+					<label>
+						<input class="delivery-select" type="checkbox"><span>DPD</span>
+					</label>
+				</div>
+			</div>
+			<div class="deliver-location">
+				<select name="location">
+					<option value="place1">place1</option>
+					<option value="place2">place2</option>
+					<option value="place3">place3</option>
+					<option value="place4">place4</option>
+				</select>
+			</div>
+		</div>
+		<input type="submit">
+	</form>
+</div>
+
+
+<footer>
+	<div class="footer-menu">
+		<div class="oy">Mardika ja Põrnikas OÜ</div>
+		<div class="footer-menu-container">
+			<div>TERMS & Condtions</div>
+			<div>Privacy</div>
+			<div>Support</div>
+			<div>Contact</div>
+		</div>
+		<div class="rights">All rights reserved</div>
+	</div>
+</footer>
+</body>
+</html>

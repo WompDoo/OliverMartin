@@ -624,6 +624,7 @@ footer {
 	transition: max-height 0.4s ease-in-out, opacity 0.1s ease-in-out;
 	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
 	display: none;
+	z-index: 10;
 }
 
 .basket-open .basket-container {
@@ -789,6 +790,120 @@ footer {
 .basket-page-price:after {
 	content: '€';
 }
+
+.items-in-basket-nubmer {
+	position: absolute;
+	right: -7px;
+	top: 11px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: white;
+	text-align: center;
+	font-size: 13px;
+	min-height: 15px;
+	min-width: 17px;
+	font-weight: bold;
+}
+
+.pay-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.personal-info, .delivery-info {
+	width: 49%;
+}
+
+.pay-form input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=text], input[type=email] {
+	border: none;
+	border-bottom: 2px solid #d95555;
+}
+
+input[type=submit] {
+	background-color: white;
+	border: 1px solid rgba(112, 110, 110, 0.65);
+	border-radius: 4px;
+	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #404040;
+	color: white;
+}
+
+.delivery-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.deliver-select-container {
+	display: flex;
+	width: 100%;
+}
+
+.deliver-select {
+	margin:4px;
+	background-color:#EFEFEF;
+	border-radius:4px;
+	border:1px solid #D0D0D0;
+	overflow:auto;
+	float:left;
+	width: calc(100%/3);
+	height: 50px;
+	cursor: pointer;
+	transition: background-color .4s ease-in-out;
+	line-height: 50px;
+
+}
+
+.deliver-select:hover {
+	background: #ffffff;
+}
+
+.deliver-select label {
+	float: left;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.deliver-select label span {
+	text-align: center;
+	padding: 3px 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.deliver-select label input {
+	position:absolute;
+	top:-20px;
+}
+
+.deliver-select input:checked + span {
+	background-color:#911;
+	color:#fff;
+}
+
+.deliver-location select {
+	border: none;
+	border-bottom: 1px solid red;
+	outline: none;
+	width:calc(145px + (715 - 145) * ((100vw - 320px) / (2560 - 320)));
+}
+
+
 
 @keyframes arrowAnim {
 	0% {
