@@ -22,9 +22,14 @@ hr {
 	margin: auto;
 }
 
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
 .logo {
-	width: 110px;
-	height: 42px;
+	width: 145px;
+	height: 60px;
 	background: url(images/logo_om.png) center/100% no-repeat;
 	margin: 40px auto;
 	transition: all .3s ease-in-out;
@@ -32,6 +37,7 @@ hr {
 
 .menu-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -82,6 +88,7 @@ hr {
 	height: 23px;
 	background:url(images/user-alt-solid.svg) center/100% no-repeat;
 	cursor: pointer;
+	position: relative;
 }
 
 .language {
@@ -590,6 +597,7 @@ footer {
 	text-transform: uppercase;
 	color: white;
 	margin: 0px;
+	text-align: unset;
 }
 
 .story:after {
@@ -613,29 +621,29 @@ footer {
 }
 
 .basket-container {
-	width: 200px;
+	width: 230px;
 	max-height: 0;
 	background-color: white;
 	border-radius: 3px;
 	position: absolute;
 	top: 30px;
-	left: -175px;
+	left: -200px;
 	opacity: 0;
-	transition: max-height 0.4s ease-in-out, opacity 0.1s ease-in-out;
+	transition: all 0.4s ease-in-out;
 	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
-	display: none;
 	z-index: 10;
+	pointer-events: none;
 }
 
 .basket-open .basket-container {
 	max-height: 600px;
 	opacity: 1;
-	display: block;
+	pointer-events: unset;
 }
 
 .basket-item {
 	display: grid;
-	padding: 10px 8px;
+	padding: 10px 20px;
 	grid-template-columns: 80% 20%;
 }
 
@@ -667,7 +675,7 @@ footer {
 
 .basket-bottom-container {
 	display: grid;
-	padding: 10px 8px;
+	padding: 10px 20px;
 	grid-template-columns: 80% 20%;
 }
 
@@ -754,6 +762,7 @@ footer {
 
 .basket-body-control-container {
 	width: 100%;
+	height: 45px;
 	margin: 0 auto;
 	margin-top: 10px;
 }
@@ -903,7 +912,215 @@ input[type=submit]:hover {
 	width:calc(145px + (715 - 145) * ((100vw - 320px) / (2560 - 320)));
 }
 
+.login-container {
+	top: 33px;
+	position: absolute;
+	display: flex;
+	right: 0px;
+	width: 460px;
+	justify-content: space-between;
+	background-color: white;
+	padding: 12px;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: all	0.4s ease-in-out;
+}
 
+.login-container input, .log-in div {
+	margin: 0 5px;
+}
+
+.user-container {
+	display: flex;
+	flex-direction: column;
+	width: 120px;
+	top: 33px;
+	position: absolute;
+	right: 0px;
+	background-color: white;
+	padding: 12px;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: all	0.4s ease-in-out;
+}
+
+.user-container div {
+	padding: 2px;
+	background-image: linear-gradient(#ed2a30, #ed2a30);
+	background-size: 0 3px, auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	transition: all .2s ease-out;
+	text-align: center;
+}
+
+.user-container a {
+	text-decoration: none;
+}
+
+.user-container div:hover {
+	background-size: 100% 3px, auto;
+}
+
+.user-open .user-container{
+	max-height: 200px;
+	opacity: 1;
+	pointer-events: unset;
+}
+
+.login-open .login-container{
+	max-height: 200px;
+	opacity: 1;
+	pointer-events: unset;
+}
+
+.email {
+	width: 40%;
+	outline: none;
+}
+
+.password {
+	width: 40%;
+	border: none;
+	border-bottom: 2px solid #d95555;
+	outline: none;
+}
+
+.log-in {
+	text-decoration: none;
+}
+
+.log-in div {
+	text-align: center;
+	text-align: center;
+	padding: 5px;
+	background-color: transparent;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	border: 1px solid rgba(112, 110, 110, 0.65);
+	border-radius: 4px;
+	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	transition: all 0.2s ease-in-out;
+}
+
+.log-in div:hover {
+	color: white;
+	background-color: #404040;
+}
+
+.log-in div:active {
+	box-shadow: none;
+}
+
+.personal-page-container {
+	display: flex;
+	margin: 45px calc(31px + (262 - 31) * ((100vw - 768px) / (1920 - 768)));
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.personal-menu {
+	display: flex;
+	width: 16%;
+	height: 100%;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+	transition: all	0.4s ease-in-out;
+	margin-bottom: 24px;
+}
+
+.personal-menu div {
+	padding: 2px;
+	background-image: linear-gradient(#ed2a30, #ed2a30);
+	background-size: 0 3px, auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	transition: all .2s ease-out;
+	text-align: center;
+	padding: 10px 0px;
+	cursor: pointer;
+}
+
+.personal-menu a {
+	text-decoration: none;
+}
+
+.personal-menu div:hover {
+	background-size: 100% 3px, auto;
+}
+
+.personal-content-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 82%;
+}
+
+.personal-info-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: white;
+	padding: 12px 30px;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+}
+
+.personal-info-container input {
+	width: 48%;
+	height: 40px;
+	margin: 30px 0;
+	border: none;
+	border-bottom: 2px solid #d95555;
+	outline: none;
+}
+
+.orders {
+	width: 100%;
+}
+
+.register-page-container {
+	margin: 0 calc(31px + (262 - 31) * ((100vw - 768px) / (1920 - 768)));
+}
+
+.register-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: white;
+	padding: 12px 30px;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+}
+
+.register-container input {
+	width: 48%;
+	height: 40px;
+	margin: 30px 0;
+	border: none;
+	border-bottom: 2px solid #d95555;
+	outline: none;
+}
+
+.register-container .agreement{
+	margin: inherit;
+	height: 20px;
+	width: 18px;
+	margin: 0 15px;
+}
+
+input:disabled {
+	cursor: not-allowed;
+}
 
 @keyframes arrowAnim {
 	0% {
@@ -957,6 +1174,39 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 768px) {
+
+	.basket-total {
+		width: 100%;
+	}
+
+	.basket-picture {
+		display: none;
+	}
+
+	.basket-body-container, .register-page-container {
+		margin: unset;
+	}
+
+	.personal-info {
+		width: 100%;
+	}
+
+	.orders {
+		padding: none;
+		overflow: scroll;
+	}
+
+	.personal-page-container {
+		margin: unset;
+	}
+
+	.personal-info-container input, .register-page-container input {
+		width: 100%;
+	}
+
+	.login-container {
+		width: 77vw;
+	}
 
 	.about-us-container {
 		display: block;
@@ -1130,6 +1380,10 @@ input[type=submit]:hover {
 	}
 
 	.shop-filter, .shop-items-container {
+		width: 100%;
+	}
+
+	.personal-menu, .personal-content-container {
 		width: 100%;
 	}
 
