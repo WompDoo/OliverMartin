@@ -96,11 +96,14 @@ h1 {
 	height: 23px;
 	background:url(images/globe-solid.svg) center/100% no-repeat;
 	position: relative;
+	cursor: pointer;
 }
 
 .language-box {
-	height: 0;
+	max-height: 0;
 	opacity: 0;
+	pointer-events: none;
+	transition: all	0.4s ease-in-out;
 	background-color: white;
 	position: absolute;
 	width: 60px;
@@ -110,8 +113,8 @@ h1 {
 	top: 28px;
 	padding-top: 8px;
 	right: -27px;
-	transition: all .3s ease-in-out;
 	z-index: 3;
+	cursor: pointer;
 }
 
 .language-box div {
@@ -128,13 +131,14 @@ h1 {
 	font-size: 12px;
 }
 
-.language:hover::after {
+.language-open::after {
 	content: "▲";
 }
 
-.language:hover .language-box{
-	height: 93px;
+.language-open .language-box{
+	max-height: 200px;
 	opacity: 1;
+	pointer-events: unset;
 }
 
 .large-header-image-container {
@@ -248,26 +252,36 @@ h1 {
 .ribbon {
 	position: absolute;
 	z-index: 1;
-	overflow: hidden;
 	width: 75px; height: 75px;
 	text-align: right;
 	border-radius: 4px;
 }
 .ribbon span {
-	font-size: 10px;
+	font-size: 15px;
 	font-weight: bold;
 	color: #FFF;
 	text-transform: uppercase;
 	text-align: center;
-	line-height: 60px;
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
+	line-height: 40px;
 	width: 70px;
 	display: block;
 	position: absolute;
-	top: -12px;
-	left: -28px;
+	top: 18px;
+	left: -8px;
 	height: 40px;
+}
+
+.ribbon span::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 7px solid;
+	border-left: 7px solid transparent;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: -1;
+	border-top-color: #000000;
 }
 
 .ribbon-sale span {
@@ -276,6 +290,18 @@ h1 {
 
 .ribbon-new span {
 	background: #2B9CE0;
+}
+
+.ribbon-soon span {
+	background: #5cc13f;
+}
+
+.ribbon-soon {
+	top: 55px;
+}
+
+.soon {
+	width: 130px !important;
 }
 
 .shop-container-item-image {
@@ -317,18 +343,49 @@ h1 {
 }
 
 .item-price {
-	width: 30%;
 	text-align: right;
 	margin: auto;
 	margin-right: auto;
 	font-size: 20px;
 	margin-right: 9%;
+	min-width: 51px;
 }
 
 .item-price::before {
 	content: "€ ";
 	font-size: 14px;
+}
 
+.sale {
+	color: #bf2f2f;
+	width: 10%;
+	margin-left: -40px;
+}
+
+.old {
+	position: relative;
+	opacity: 0.3;
+	color: black;
+}
+
+.old::after {
+	position: absolute;
+	content: "";
+	left: 18px;
+	top: 50%;
+	right: 0;
+	border-top: 1px solid;
+	border-color: inherit;
+	-webkit-transform: rotate(-18deg);
+	-moz-transform: rotate(-18deg);
+	-ms-transform: rotate(-18deg);
+	-o-transform: rotate(-18deg);
+	transform: rotate(-18deg);
+	width: 70%;
+}
+
+.shop-container a {
+	color: black;
 }
 
 footer {
@@ -453,6 +510,12 @@ footer {
 	width: unset;
 	text-align: unset;
 	font-size: 30px;
+	margin-left: 0px;
+}
+
+.product-price .old {
+	float: left;
+	margin-right: 15px;
 }
 
 .product-price:before {
@@ -460,7 +523,7 @@ footer {
 }
 
 .product-add-to-cart {
-	padding: 5px 30px;
+	padding: 5px 20px;
 	background-color: transparent;
 	border: 2px solid #404040;
 	border-radius: 4px;
@@ -524,6 +587,14 @@ footer {
 .product-sizes-dropdown:hover .dropbtn {
 	background-color: #404040;
 	color: white;
+}
+
+.product-amount {
+	padding: 5px;
+	width: 40px;
+	border: 2px solid #867d7d;
+	border-radius: 4px;
+	box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
 .products-view {
@@ -934,6 +1005,10 @@ input[type=submit]:hover {
 	margin: 0 5px;
 }
 
+.login-container a, .user-container a, .personal-menu a {
+	color: #000;
+}
+
 .user-container {
 	display: flex;
 	flex-direction: column;
@@ -1090,7 +1165,11 @@ input[type=submit]:hover {
 }
 
 .register-page-container {
-	margin: 0 calc(31px + (262 - 31) * ((100vw - 768px) / (1920 - 768)));
+	margin: 45px calc(31px + (262 - 31) * ((100vw - 768px) / (1920 - 768)));
+}
+
+.register {
+	border: 1px solid rgba(112, 110, 110, 0.65) !important;
 }
 
 .register-container {
@@ -1213,6 +1292,18 @@ input:disabled {
 }
 
 @media screen and (max-width: 768px) {
+
+	.item-price.old {
+		display: none;
+	}
+
+	.item-price.sale {
+		margin-left: unset;
+	}
+
+	.product-price.old {
+		display: unset;
+	}
 
 	.basket-total {
 		width: 100%;
@@ -1436,5 +1527,13 @@ input:disabled {
 @media screen and (max-width: 508px) {
 	.shop-container-item {
 		width: 100%;
+	}
+
+	.item-price.old {
+		display: unset;
+	}
+
+	.item-price.sale {
+		margin-left: -20px;
 	}
 }

@@ -24,7 +24,7 @@
 		</svg>
 	</div>
 	<div class="menu-container">
-		<div class="language">
+		<div onclick="this.classList.toggle('language-open')" class="language">
 			<div class="language-box">
 				<div>EST</div>
 				<div>ENG</div>
@@ -82,7 +82,8 @@
 <div class="shop-container">
 	<div class="shop-container-item">
 		<a href="product.html">
-			<div class="ribbon ribbon-new"><span>New</span></div>
+			<div class="ribbon ribbon-new"><span class="ribbonBadge new">New</span></div>
+			<div class="ribbon ribbon-soon"><span class="ribbonBadge soon">Coming Soon</span></div>
 			<img class="shop-container-item-image" src="images/pj.svg">
 			<div class="item-info-container">
 				<div class="item-text-container">
@@ -114,15 +115,18 @@
 		</div>
 	</div>
 	<div class="shop-container-item">
-		<div class="ribbon ribbon-sale"><span>-20%</span></div>
-		<img class="shop-container-item-image" src="images/pj.svg">
-		<div class="item-info-container">
-			<div class="item-text-container">
-				<p class="item-name">cops and robbers</p>
-				<p class="item-description">who's smarter?</p>
+		<a href="product-sale.html">
+			<div class="ribbon ribbon-sale"><span>-20%</span></div>
+			<img class="shop-container-item-image" src="images/pj.svg">
+			<div class="item-info-container">
+				<div class="item-text-container">
+					<p class="item-name">cops and robbers</p>
+					<p class="item-description">who's smarter?</p>
+				</div>
+				<p class="item-price old">52</p>
+				<p class="item-price sale">41.6</p>
 			</div>
-			<p class="item-price">52</p>
-		</div>
+		</a>
 	</div>
 	<div class="shop-container-item">
 		<img class="shop-container-item-image" src="images/pj.svg">
