@@ -358,8 +358,6 @@ h1 {
 
 .sale {
 	color: #bf2f2f;
-	width: 10%;
-	margin-left: -40px;
 }
 
 .old {
@@ -1297,10 +1295,6 @@ input:disabled {
 		display: none;
 	}
 
-	.item-price.sale {
-		margin-left: unset;
-	}
-
 	.product-price.old {
 		display: unset;
 	}
@@ -1531,9 +1525,5 @@ input:disabled {
 
 	.item-price.old {
 		display: unset;
-	}
-
-	.item-price.sale {
-		margin-left: -20px;
 	}
 }
