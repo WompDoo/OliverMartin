@@ -191,7 +191,9 @@ h1 {
 }
 
 .category-list li:after {
-	content: '⏵';
+	content: '▶';
+	font-size: 12px;
+	margin-left: 5px;
 }
 
 .filter-sizes-container {
