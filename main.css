@@ -190,10 +190,34 @@ h1 {
 	padding-left: 8px;
 }
 
-.category-list li:after {
+.category-arrow {
+	position: absolute;
+	transition: all 0.4s ease-in-out;
+}
+
+.category-arrow:after {
 	content: '▶';
 	font-size: 12px;
 	margin-left: 5px;
+}
+
+.sub-category-list {
+	list-style: none;
+	padding-inline-start: 6px;
+	max-height: 0;
+	opacity: 0;
+	transition: all .4s ease-in-out;
+	pointer-events: none;
+}
+
+.category-open .category-arrow {
+	transform: rotate(90deg);
+}
+
+.category-open .sub-category-list {
+	max-height: 200px;
+	opacity: 1;
+	pointer-events: all;
 }
 
 .filter-sizes-container {
@@ -987,10 +1011,13 @@ input[type=submit]:hover {
 
 .login-container {
 	top: 33px;
-	position: absolute;
+	position: fixed;
 	display: flex;
-	right: 0px;
-	width: 460px;
+	width: 30%;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
 	justify-content: space-between;
 	background-color: white;
 	padding: 12px;
@@ -1000,6 +1027,9 @@ input[type=submit]:hover {
 	opacity: 0;
 	pointer-events: none;
 	transition: all	0.4s ease-in-out;
+	flex-wrap: wrap;
+	word-break: break-word;
+	overflow-y: scroll;
 }
 
 .login-container input, .log-in div {
@@ -1052,18 +1082,24 @@ input[type=submit]:hover {
 }
 
 .login-open .login-container{
-	max-height: 200px;
+	max-height: 800px;
 	opacity: 1;
 	pointer-events: unset;
 }
 
+.login-open	.modal {
+	display: block;
+}
+
 .email {
-	width: 40%;
+	width: 100%;
+	height: 40px;
 	outline: none;
 }
 
 .password {
-	width: 40%;
+	width: 100%;
+	height: 40px;
 	border: none;
 	border-bottom: 2px solid #d95555;
 	outline: none;
@@ -1071,6 +1107,7 @@ input[type=submit]:hover {
 
 .log-in {
 	text-decoration: none;
+	padding-top: 20px;
 }
 
 .log-in div {
@@ -1241,6 +1278,38 @@ input:disabled {
 	cursor: not-allowed;
 }
 
+.modal {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(15, 15, 15, 0.75);
+	z-index: 2;
+}
+
+.modal-open .modal {
+	display: block;
+}
+
+.generic-container {
+	position: fixed;
+	display: flex;
+	width: 30%;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+	justify-content: space-between;
+	background-color: white;
+	padding: 12px;
+	border-radius: 4px;
+	box-shadow: 0px 24px 64px 0px rgba(0,0,0,0.08);
+}
+
 @keyframes arrowAnim {
 	0% {
 		margin-left: 20px;
@@ -1331,8 +1400,8 @@ input:disabled {
 		width: 100%;
 	}
 
-	.login-container {
-		width: 77vw;
+	.login-container, .generic-container {
+		width: 80%;
 	}
 
 	.about-us-container {

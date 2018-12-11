@@ -77,8 +77,15 @@
         <input type="email" placeholder="user@gmail.com">
         <input type="password" placeholder="Password">
         <input type="password" placeholder="Password">
-        <label>Agree with things
-        <input class="agreement" type="checkbox">
+        <label >
+            <span onclick="this.classList.toggle('modal-open')">Agree with things
+                <div class="modal">
+                    <div class="generic-container">
+                        <p>Mingi tekst</p>
+                    </div>
+                </div>
+            </span>
+            <input class="agreement" type="checkbox">
         </label>
         <input class="register" type="submit">
     </div>
